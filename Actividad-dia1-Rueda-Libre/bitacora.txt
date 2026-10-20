@@ -120,3 +120,51 @@ tablas son solo para datos.
 En Network todo cargo con 200, ningun 404. Tambien corregi una frase
 del inicio que decia que todas las rutas eran para principiantes,
 porque el Reto Las Palmas es dificil.
+
+
+Dia 4 - Menu, pie de pagina y reservas (v0.1)
+
+1. Pagina de reservas
+Cree paginas/reservas.html con su estructura completa, el titulo
+"Reserva tu bicicleta", el correo con mailto y el horario en una
+lista de definiciones (dl): el dt es el dia y el dd el horario.
+  Lunes a viernes -> 7:00 a. m. a 7:00 p. m.
+  Sabados, domingos y festivos -> 6:00 a. m. a 2:00 p. m.
+
+2. Menu y pie de pagina
+Puse el mismo menu (nav con una ul) al comienzo de las 3 paginas:
+Inicio, Tarifas y rutas, Reservas. Las rutas cambian segun la
+carpeta donde esta cada archivo.
+El pie de pagina (footer) tiene el nombre, el correo y el año.
+Tambien agregue "Reservar ahora" en el inicio y debajo de la tabla
+de recorridos.
+
+3. Titulos de cada pagina
+- index.html: Rueda Libre | Alquiler de bicicletas en Medellín
+- tarifas.html: Tarifas | Rueda Libre - Bicicletas en Medellín
+- reservas.html: Reservas | Rueda Libre - Bicicletas en Medellín
+
+4. Tabla de rutas
+Origen                 -> Destino                       -> Ruta escrita
+index.html             -> index.html                    -> index.html
+index.html             -> paginas/tarifas.html          -> paginas/tarifas.html
+index.html             -> paginas/reservas.html         -> paginas/reservas.html
+index.html             -> tabla de recorridos           -> paginas/tarifas.html#recorridos
+index.html             -> seccion Encuéntranos          -> #encuentranos
+index.html             -> img/*.jpg                     -> img/logo.jpg (igual las otras)
+paginas/tarifas.html   -> index.html                    -> ../index.html
+paginas/tarifas.html   -> paginas/tarifas.html          -> tarifas.html
+paginas/tarifas.html   -> paginas/reservas.html         -> reservas.html
+paginas/tarifas.html   -> img/logo.jpg                  -> ../img/logo.jpg
+paginas/reservas.html  -> index.html                    -> ../index.html
+paginas/reservas.html  -> paginas/tarifas.html          -> tarifas.html
+paginas/reservas.html  -> paginas/reservas.html         -> reservas.html
+paginas/reservas.html  -> img/logo.jpg                  -> ../img/logo.jpg
+
+Lo que aprendi: si el archivo esta en la misma carpeta solo pongo el
+nombre, si esta en una subcarpeta pongo carpeta/archivo y si esta una
+carpeta arriba uso ../
+
+5. Revision
+Desde cada pagina entre a las otras usando solo el menu (9
+combinaciones) y en Network todo salio 200, ningun 404.
