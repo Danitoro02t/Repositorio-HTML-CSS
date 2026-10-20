@@ -19,9 +19,9 @@ sube carpetas vacias.
 Puse el doctype, el idioma en español (lang="es"), el charset UTF-8
 para que salgan bien las tildes, el viewport para celulares, una
 descripcion para google y el titulo "Rueda Libre | Alquiler de
-bicicletas en Medellín".
+bicicletas en Medellín"
 En el body puse el nombre en un h1, un parrafo de bienvenida, la
-lista de servicios y el link para reservar por WhatsApp.
+lista de servicios y el link para reservar por WhatsApp
 
 4. Network en DevTools
 Abri la pagina con Live Server, despues F12, pestaña Network y
@@ -35,57 +35,57 @@ Ruta: /Actividad-dia1-Rueda-Libre/index.html
 Metodo: GET
 Codigo de estado: 200 (quiere decir que todo salio bien)
 
-Tambien vi que aparte pidio el logo.jpg.
+Tambien vi que aparte pidio el logo.jpg
 
 5. Pagina que no existe
 Escribi /promociones.html en la barra de direcciones y me salio
 el codigo 404. Eso significa que el servidor no encontro la pagina
-porque ese archivo no existe.
+porque ese archivo no existe
 
 6. HTML, CSS y JavaScript
 - HTML: es la estructura y el contenido de la pagina. Ejemplo: el
-  titulo Rueda Libre y la lista de servicios.
+  titulo Rueda Libre y la lista de servicios
 - CSS: es para el diseño, como se ve la pagina. Ejemplo: ponerle los
   colores verdes del logo y que los servicios se vean como tarjetas.
 - JavaScript: es para que la pagina haga cosas. Ejemplo: un boton que
   arme el mensaje de WhatsApp con la bici y la fecha que elija el
-  cliente.
+  cliente
 
 7. Commit
 Hice el commit con el mensaje "Crear estructura inicial y página base
-de Rueda Libre" y lo subi a GitHub con git push.
+de Rueda Libre" y lo subi a GitHub con git push
 
 
 Dia 2 - Contenido de la pagina de inicio
 
 1. Esquema
-Deje un solo h1 (Rueda Libre) y 4 secciones con h2: ¿Quiénes somos?,
+Deje un solo h1 (Rueda Libre) y 4 secciones con h2: Quiénes somos?,
 Nuestros servicios, ¿Cómo alquilar? y Encuéntranos. Cada servicio
-tiene su h3 y su parrafo. No me salte ningun nivel de encabezado.
+tiene su h3 y su parrafo. No me salte ningun nivel de encabezado
 
 2. strong y em
 Use strong para lo importante, por ejemplo "incluyen casco y
-candado", y em para matices como "aptas para principiantes".
+candado", y em para matices como "aptas para principiantes"
 
 3. Listas
 - ol con los 4 pasos para alquilar.
 - ul con 3 beneficios (casco y candado, bicis revisadas, reserva
-  rapida).
+  rapida)
 
 4. Imagenes
 Guarde en img/ portada.jpg, bicicleta.jpg y ruta.jpg. Todas con
-ruta relativa (img/...), alt que describe la imagen y width.
+ruta relativa (img/...), alt que describe la imagen y width
 
 5. Enlaces
 - Absoluto: Google Maps, abre en otra pestaña con target="_blank".
 - Correo: mailto:hola@ruedalibre.example
 - Interno: en el primer parrafo hay un link a #encuentranos (le puse
-  id="encuentranos" a esa seccion).
+  id="encuentranos" a esa seccion)
 
 6. Revision en DevTools
 En Elements revise que las secciones quedaran una despues de la otra
 dentro del main y no una metida dentro de otra. En Network recargue
-y todo salio con 200, ningun 404.
+y todo salio con 200, ningun 404
 
 
 Dia 3 - Pagina de tarifas
@@ -93,7 +93,7 @@ Dia 3 - Pagina de tarifas
 1. Pagina nueva
 Cree paginas/tarifas.html con su estructura completa (doctype, lang,
 charset, viewport, descripcion) y su propio titulo: "Tarifas | Rueda
-Libre - Bicicletas en Medellín".
+Libre - Bicicletas en Medellín"
 
 2. Tablas
 Hice dos tablas, una de alquiler y otra de recorridos. Las dos tienen
@@ -101,12 +101,12 @@ caption (el titulo de la tabla), thead, tbody, th y td.
 Los th de arriba tienen scope="col" porque describen una columna y
 los del nombre de cada fila (Urbana, Montaña, Río y Parques...)
 tienen scope="row". Esto sirve para los lectores de pantalla.
-A la seccion de recorridos le puse id="recorridos".
+A la seccion de recorridos le puse id="recorridos"
 
 3. Informacion extra
 Lo de casco y candado y los horarios los puse en parrafos y lo que
 hay que llevar en una lista ul. No lo meti en la tabla porque las
-tablas son solo para datos.
+tablas son solo para datos
 
 4. Rutas relativas
 - El logo en tarifas.html es ../img/logo.jpg. El ../ es para subir
@@ -114,12 +114,12 @@ tablas son solo para datos.
 - De tarifas al inicio: ../index.html
 - Del inicio a tarifas: paginas/tarifas.html
 - Del servicio de recorridos a la tabla: paginas/tarifas.html#recorridos
-  (el archivo + el id de la seccion).
+  (el archivo + el id de la seccion)
 
 5. Revision
 En Network todo cargo con 200, ningun 404. Tambien corregi una frase
 del inicio que decia que todas las rutas eran para principiantes,
-porque el Reto Las Palmas es dificil.
+porque el Reto Las Palmas es dificil
 
 
 Dia 4 - Menu, pie de pagina y reservas (v0.1)
@@ -129,7 +129,7 @@ Cree paginas/reservas.html con su estructura completa, el titulo
 "Reserva tu bicicleta", el correo con mailto y el horario en una
 lista de definiciones (dl): el dt es el dia y el dd el horario.
   Lunes a viernes -> 7:00 a. m. a 7:00 p. m.
-  Sabados, domingos y festivos -> 6:00 a. m. a 2:00 p. m.
+  Sabados, domingos y festivos -> 6:00 a. m. a 2:00 p. m
 
 2. Menu y pie de pagina
 Puse el mismo menu (nav con una ul) al comienzo de las 3 paginas:
@@ -137,7 +137,7 @@ Inicio, Tarifas y rutas, Reservas. Las rutas cambian segun la
 carpeta donde esta cada archivo.
 El pie de pagina (footer) tiene el nombre, el correo y el año.
 Tambien agregue "Reservar ahora" en el inicio y debajo de la tabla
-de recorridos.
+de recorridos
 
 3. Titulos de cada pagina
 - index.html: Rueda Libre | Alquiler de bicicletas en Medellín
@@ -167,4 +167,4 @@ carpeta arriba uso ../
 
 5. Revision
 Desde cada pagina entre a las otras usando solo el menu (9
-combinaciones) y en Network todo salio 200, ningun 404.
+combinaciones) y en Network todo salio 200, ningun 404
