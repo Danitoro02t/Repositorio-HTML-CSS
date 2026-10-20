@@ -1,107 +1,88 @@
-==============================================================
- BITÁCORA · Proyecto Rueda Libre (Nodo Digital)
- Actividad día 1 · Preparación del proyecto y documento base
- Fecha: 2026-10-20
-==============================================================
+Bitacora - Rueda Libre
+Dia 1 - 20/10/2026
 
---------------------------------------------------------------
-1. REPOSITORIO Y CONTROL DE VERSIONES
---------------------------------------------------------------
-- El proyecto se trabaja dentro del repositorio público de GitHub
-  "Repositorio-HTML-CSS", en la carpeta "Actividad-dia1-Rueda-Libre".
-  Remoto: https://github.com/Danitoro02t/Repositorio-HTML-CSS.git
-- Comandos usados (equivalentes para un repo propio "rueda-libre"):
-    git init
-    git remote add origin https://github.com/<usuario>/rueda-libre.git
-    git add .
-    git commit -m "mensaje"
-    git push -u origin main
+1. Repositorio
+Cree la carpeta Actividad-dia1-Rueda-Libre dentro de mi repositorio
+de GitHub (Repositorio-HTML-CSS). El repo ya tenia git iniciado y
+conectado con GitHub, asi que solo tuve que crear la carpeta.
 
---------------------------------------------------------------
-2. ESTRUCTURA INICIAL
---------------------------------------------------------------
-Actividad-dia1-Rueda-Libre/
-├── index.html      -> página de inicio
-├── bitacora.txt    -> este registro
-├── paginas/        -> futuras páginas internas (servicios, contacto...)
-│   └── .gitkeep    -> Git no guarda carpetas vacías; este archivo la conserva
-└── img/
-    └── logo.svg    -> logo del negocio (se usará en el siguiente reto)
+2. Estructura
+Cree estos archivos y carpetas:
+- index.html (la pagina de inicio)
+- paginas/ (para las otras paginas que vamos a hacer despues)
+- img/ (ahi guarde el logo, logo.jpg)
+- bitacora.txt (este archivo)
+Nota: a la carpeta paginas le puse un archivo .gitkeep porque git no
+sube carpetas vacias.
 
---------------------------------------------------------------
-3. ESTRUCTURA BASE DE index.html
---------------------------------------------------------------
-- <!DOCTYPE html>                 -> le indica al navegador que es HTML5.
-- <html lang="es">                -> idioma español (accesibilidad y buscadores).
-- <meta charset="UTF-8">          -> codificación para tildes y ñ.
-- <meta name="viewport" ...>      -> adapta la página al ancho del celular.
-- <meta name="description" ...>   -> descripción del negocio para buscadores.
-- <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-- Cuerpo: <h1> con el nombre del negocio, párrafo de bienvenida,
-  sección "Nuestros servicios" con <h2> y lista <ul>, y un enlace
-  "Reserva por WhatsApp" en el <footer>. Se usaron etiquetas
-  semánticas: <header>, <main>, <section>, <footer>.
+3. index.html
+Puse el doctype, el idioma en español (lang="es"), el charset UTF-8
+para que salgan bien las tildes, el viewport para celulares, una
+descripcion para google y el titulo "Rueda Libre | Alquiler de
+bicicletas en Medellín".
+En el body puse el nombre en un h1, un parrafo de bienvenida, la
+lista de servicios y el link para reservar por WhatsApp.
 
---------------------------------------------------------------
-4. PETICIÓN DEL DOCUMENTO (Live Server + DevTools > Network)
---------------------------------------------------------------
-Pasos: clic derecho en index.html > "Open with Live Server",
-F12 > pestaña Network > recargar (F5) > clic en la fila "index.html"
-> pestaña Headers.
+4. Network en DevTools
+Abri la pagina con Live Server, despues F12, pestaña Network y
+recargue la pagina. Le di clic a index.html y esto fue lo que vi:
 
-  URL completa : http://127.0.0.1:5500/Actividad-dia1-Rueda-Libre/index.html
-  Protocolo    : HTTP (versión HTTP/1.1)
-  Host         : 127.0.0.1  (equivale a "localhost", mi propio equipo)
-  Puerto       : 5500  (puerto por defecto de Live Server)
-  Ruta         : /Actividad-dia1-Rueda-Libre/index.html
-  Método       : GET  (el navegador pide/obtiene un recurso)
-  Código       : 200 OK  (el servidor encontró y envió la página)
+URL: http://127.0.0.1:5500/Actividad-dia1-Rueda-Libre/index.html
+Protocolo: http
+Host: 127.0.0.1 (es mi propio computador)
+Puerto: 5500
+Ruta: /Actividad-dia1-Rueda-Libre/index.html
+Metodo: GET
+Codigo de estado: 200 (quiere decir que todo salio bien)
 
-Observación: en la misma pestaña aparece además la petición de
-img/logo.svg, porque el navegador pide por separado cada recurso
-que el HTML referencia.
+Tambien vi que aparte pidio el logo.jpg.
 
---------------------------------------------------------------
-5. RUTA QUE NO EXISTE
---------------------------------------------------------------
-  URL probada : http://127.0.0.1:5500/Actividad-dia1-Rueda-Libre/promociones.html
-  Código      : 404 Not Found
-  Significado : el servidor sí está funcionando y recibió la petición,
-                pero no existe ningún archivo en esa ruta. Los códigos
-                4xx indican un error del lado del cliente (pidió algo
-                que no hay); los 5xx serían fallas del servidor.
+5. Pagina que no existe
+Escribi /promociones.html en la barra de direcciones y me salio
+el codigo 404. Eso significa que el servidor no encontro la pagina
+porque ese archivo no existe.
 
---------------------------------------------------------------
-6. ¿QUÉ PASA CUANDO ALGUIEN ESCRIBE LA DIRECCIÓN DEL SITIO?
-   (respuesta para el cliente)
---------------------------------------------------------------
-1) El navegador separa la URL: protocolo, dominio, puerto y ruta.
-2) Traduce el dominio a una dirección IP (DNS).
-3) Se conecta al servidor y envía una petición GET por la ruta.
-4) El servidor responde con un código (200, 404...) y el HTML.
-5) El navegador lee el HTML, pide las imágenes/CSS/JS que necesita
-   y dibuja la página en pantalla.
+6. HTML, CSS y JavaScript
+- HTML: es la estructura y el contenido de la pagina. Ejemplo: el
+  titulo Rueda Libre y la lista de servicios.
+- CSS: es para el diseño, como se ve la pagina. Ejemplo: ponerle los
+  colores verdes del logo y que los servicios se vean como tarjetas.
+- JavaScript: es para que la pagina haga cosas. Ejemplo: un boton que
+  arme el mensaje de WhatsApp con la bici y la fecha que elija el
+  cliente.
 
---------------------------------------------------------------
-7. ROLES DE HTML, CSS Y JAVASCRIPT EN RUEDA LIBRE
---------------------------------------------------------------
-- HTML (estructura y contenido): define qué hay en la página.
-  Ejemplo: el título <h1>Rueda Libre</h1> y la lista <ul> con
-  "Alquiler de bicicletas", "Recorridos guiados" y "Taller básico".
+7. Commit
+Hice el commit con el mensaje "Crear estructura inicial y página base
+de Rueda Libre" y lo subi a GitHub con git push.
 
-- CSS (presentación y diseño): define cómo se ve.
-  Ejemplo: colores verdes de la marca, tipografía, y que la lista
-  de servicios se muestre como tarjetas en fila en computador y
-  en columna en el celular.
 
-- JavaScript (comportamiento e interacción): define qué hace.
-  Ejemplo: un formulario de reserva que valide la fecha y arme
-  automáticamente el mensaje de WhatsApp con la bicicleta y el
-  día elegidos, o un menú desplegable en el celular.
+Dia 2 - Contenido de la pagina de inicio
 
---------------------------------------------------------------
-8. COMMIT Y SUBIDA A GITHUB
---------------------------------------------------------------
-  git add Actividad-dia1-Rueda-Libre
-  git commit -m "Crear estructura inicial y página base de Rueda Libre"
-  git push origin main
+1. Esquema
+Deje un solo h1 (Rueda Libre) y 4 secciones con h2: ¿Quiénes somos?,
+Nuestros servicios, ¿Cómo alquilar? y Encuéntranos. Cada servicio
+tiene su h3 y su parrafo. No me salte ningun nivel de encabezado.
+
+2. strong y em
+Use strong para lo importante, por ejemplo "incluyen casco y
+candado", y em para matices como "aptas para principiantes".
+
+3. Listas
+- ol con los 4 pasos para alquilar.
+- ul con 3 beneficios (casco y candado, bicis revisadas, reserva
+  rapida).
+
+4. Imagenes
+Guarde en img/ portada.jpg, bicicleta.jpg y ruta.jpg. Todas con
+ruta relativa (img/...), alt que describe la imagen y width.
+
+5. Enlaces
+- Absoluto: Google Maps, abre en otra pestaña con target="_blank".
+- Correo: mailto:hola@ruedalibre.example
+- Interno: en el primer parrafo hay un link a #encuentranos (le puse
+  id="encuentranos" a esa seccion).
+
+6. Revision en DevTools
+En Elements revise que las secciones quedaran una despues de la otra
+dentro del main y no una metida dentro de otra. En Network recargue
+y todo salio con 200, ningun 404.
