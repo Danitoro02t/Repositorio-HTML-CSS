@@ -86,3 +86,37 @@ ruta relativa (img/...), alt que describe la imagen y width.
 En Elements revise que las secciones quedaran una despues de la otra
 dentro del main y no una metida dentro de otra. En Network recargue
 y todo salio con 200, ningun 404.
+
+
+Dia 3 - Pagina de tarifas
+
+1. Pagina nueva
+Cree paginas/tarifas.html con su estructura completa (doctype, lang,
+charset, viewport, descripcion) y su propio titulo: "Tarifas | Rueda
+Libre - Bicicletas en Medellín".
+
+2. Tablas
+Hice dos tablas, una de alquiler y otra de recorridos. Las dos tienen
+caption (el titulo de la tabla), thead, tbody, th y td.
+Los th de arriba tienen scope="col" porque describen una columna y
+los del nombre de cada fila (Urbana, Montaña, Río y Parques...)
+tienen scope="row". Esto sirve para los lectores de pantalla.
+A la seccion de recorridos le puse id="recorridos".
+
+3. Informacion extra
+Lo de casco y candado y los horarios los puse en parrafos y lo que
+hay que llevar en una lista ul. No lo meti en la tabla porque las
+tablas son solo para datos.
+
+4. Rutas relativas
+- El logo en tarifas.html es ../img/logo.jpg. El ../ es para subir
+  una carpeta, porque tarifas esta dentro de paginas/.
+- De tarifas al inicio: ../index.html
+- Del inicio a tarifas: paginas/tarifas.html
+- Del servicio de recorridos a la tabla: paginas/tarifas.html#recorridos
+  (el archivo + el id de la seccion).
+
+5. Revision
+En Network todo cargo con 200, ningun 404. Tambien corregi una frase
+del inicio que decia que todas las rutas eran para principiantes,
+porque el Reto Las Palmas es dificil.
